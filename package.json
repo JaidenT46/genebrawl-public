@@ -1,0 +1,51 @@
+{
+  "name": "genebrawl",
+  "version": "62.250.0",
+  "description": "A frida-based modification for Brawl Stars",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "webpack --mode production --env script=free",
+    "build_vip": "webpack --mode production --env script=vip",
+    "build_dev": "webpack --mode development --env script=dev",
+    "watch": "webpack --watch --mode development --env script=dev",
+    "watch_old": "frida-compile src/index.ts -o dist/agent.js -w",
+    "gadget": "npm run build_dev && frida -U Gadget -l dist/bundle.js",
+    "gadget_prod": "npm run build && frida -U Gadget -l dist/bundle.js",
+    "gadget_vip": "npm run build_vip && frida -U Gadget -l dist/bundle.js",
+    "ios_laser": "npm run build && frida -U -f com.supercell.laser -l dist/bundle.js",
+    "ios_laser_dev": "npm run build_dev && frida -U -f com.supercell.laser -l dist/bundle.js",
+    "frida_mac_dev": "npm run build_dev && frida -f /Users/$USER/Library/Containers/io.playcover.PlayCover/Applications/gene.brawl.dev.app/laser -l dist/bundle.js",
+    "compile": "python3 tools/compile_bytecode.py"
+  },
+  "devDependencies": {
+    "@types/frida-gum": "^19.0.1",
+    "@types/node": "^18.19.45",
+    "frida-compile": "^16.4.1",
+    "ifdef-loader": "^2.3.2",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomashkaTea/genebrawl-public.git"
+  },
+  "keywords": [
+    "genebrawl"
+  ],
+  "author": "RomashkaTea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomashkaTea/genebrawl-public/issues"
+  },
+  "homepage": "https://github.com/RomashkaTea/genebrawl-public#readme",
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "frida-objc-bridge": "^8.0.5",
+    "javascript-obfuscator": "^4.1.1",
+    "webpack-obfuscator": "^3.5.1"
+  }
+}
