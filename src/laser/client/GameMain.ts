@@ -84,12 +84,9 @@ export class GameMain {
             GameMain_setAccountTier(gameMain, accountTier);
         }, 'void', ['pointer', 'int']));
 
-        Interceptor.attach(GameMain_showNativeDialog, { // In case BFP Brawl or Stage Server are unavailable.
+        Interceptor.attach(GameMain_showNativeDialog, { // In case Stage Server is unavailable.
             onEnter(args) {
                 if (args[1].toInt32() == 3 || args[1].toInt32() == 8) {
-                    if (Configuration.useBfp)
-                        Configuration.useBfp = false;
-
                     if (Configuration.useStage)
                         Configuration.useStage = false;
                 }

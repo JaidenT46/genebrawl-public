@@ -36,7 +36,7 @@ export class HomePage {
 
     private static patchStartGame() {
         Interceptor.replace(HomePage_startGame, new NativeCallback(function (a1, a2, a3, a4, a5, a6, a7, a8, a9) {
-            if (Configuration.useBfp)
+            if (false) // i'll just leave this, may be useful for those who want to enable offline battles
                 a4 = ptr(3);
 
             HomePage_startGame(a1, a2, a3, a4, a5, a6, a7, a8, a9);

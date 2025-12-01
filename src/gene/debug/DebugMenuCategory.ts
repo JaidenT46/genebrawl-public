@@ -12,7 +12,6 @@ export enum EDebugCategory {
     BATTLE,
     LATENCY,
     CAMERA_MODE,
-    BFP,
     CHANGE_THEME,
     FUN,
     GFX,

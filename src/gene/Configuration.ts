@@ -3,7 +3,7 @@ import {Constants} from "./Constants";
 import {NCoder} from "./networking/NetworkManager";
 
 const DO_NOT_SAVE_KEYS = [
-    "useBfp", "isChinaVersion",
+    "isChinaVersion",
     "braille", "braille_textfield"
 ];
 
@@ -11,7 +11,6 @@ export class Configuration {
     // static [name]: [type] = [defaultValue (optional)]
     static useProxy: boolean;
     static useStage: boolean;
-    static useBfp: boolean;
 
     static key: string;
     static validKey: string = Constants.UNAVAILABLE_KEY_STRING;
@@ -96,9 +95,6 @@ export class Configuration {
     // Battle servers
     static regionId: number = -1;
 
-    // BFP
-    static accountTags: { [key: string]: string; } = {};
-
     // skinChanger
     static skinChangerObjects: { [key: number]: number; } = {};
 
@@ -139,7 +135,6 @@ export class Configuration {
             console.log(e);
         }
 
-        Configuration.useBfp = false;
         Configuration.braille = false;
         Configuration.isChinaVersion = false;
         Configuration.braille_textfield = false;

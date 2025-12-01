@@ -201,8 +201,6 @@ export class LocalizationManager {
             STOP_ROOM_SPAM: "Остановить спам в руме",
             SWITCH_TO_STAGE_SERVER: "Переключиться на Stage сервер",
             SWITCH_TO_PROD_SERVER: "Переключиться на Production сервер",
-            SWITCH_TO_BFP_BRAWL: "Переключиться на BFP Brawl",
-            RETURN_FROM_BFP_BRAWL: "Вернуться с BFP Brawl",
             UNLOCK_GEARS: "Разблокировать снаряжения",
             UNLOCK_CURRENT_BRAWL_PASS_SEASON: "Разблокировать Brawl Pass",
             UNLOCK_CURRENT_BRAWL_PASS_PLUS_SEASON: "Разблокировать Brawl Pass+",
@@ -436,10 +434,6 @@ export class LocalizationManager {
             NOT_IMPLEMENTED_YET_IOS: "Эта функция ещё не реализована на iOS!",
             NOT_IMPLEMENTED_YET_ANDROID: "Эта функция ещё не реализована на Android!",
 
-            BFP_ACCOUNT_REMOVED: "Последний аккаунт ($TAG) был удален!",
-            BFP_ALL_ACCOUNTS_REMOVED: "Все аккаунты удалены!",
-            BFP_NO_ACCOUNTS: "Нет сохраненных аккаунтов",
-
             BOT_PREFIX_ON: "Префикс <c3>[BOT]</c> будет показываться в реальном бою у ботов.",
             BOT_PREFIX_OFF: "Префикс <c3>[BOT]</c> больше не будет показываться.",
 
@@ -500,7 +494,6 @@ export class LocalizationManager {
             BATTLE: "Бой",
             LATENCY: "Смена боевого сервера",
             CAMERA_MODE: "Режим камеры",
-            BFP: "БФП",
             CHANGE_THEME: "Сменить тему",
             FUN: "Забавки",
             GFX: "Графика",
@@ -631,9 +624,7 @@ export class LocalizationManager {
             START_ROOM_SPAM: "Start room spam",
             STOP_ROOM_SPAM: "Stop room spam",
             SWITCH_TO_STAGE_SERVER: "Switch to Stage server",
-            SWITCH_TO_BFP_BRAWL: "Switch to BFP Brawl",
             SWITCH_TO_PROD_SERVER: "Switch to Production server",
-            RETURN_FROM_BFP_BRAWL: "Return from BFP Brawl",
             UNLOCK_GEARS: "Unlock Gears",
             UNLOCK_CURRENT_BRAWL_PASS_SEASON: "Unlock Current Brawl Pass Season",
             UNLOCK_CURRENT_BRAWL_PASS_PLUS_SEASON: "Unlock current Brawl Pass Plus Season",
@@ -890,10 +881,6 @@ export class LocalizationManager {
             INCORRECT_URL: "Invalid URL!",
             OPEN_URL_BUTTON: "Open",
 
-            BFP_ACCOUNT_REMOVED: "Last account ($TAG) removed!",
-            BFP_ALL_ACCOUNTS_REMOVED: "All accounts removed!",
-            BFP_NO_ACCOUNTS: "No accounts for BFP saved yet!",
-
             BOT_PREFIX_ON: "<c3>[BOT]</c> prefix is now displayed.",
             BOT_PREFIX_OFF: "<c3>[BOT]</c> prefix is no longer displayed.",
 
@@ -955,7 +942,6 @@ export class LocalizationManager {
             BATTLE: "Battle",
             LATENCY: "Latency",
             CAMERA_MODE: "Camera Mode",
-            BFP: "BFP",
             CHANGE_THEME: "Change Theme",
             FUN: "Fun",
             GFX: "GFX",

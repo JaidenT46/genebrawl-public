@@ -54,16 +54,6 @@ import {Path} from "../../titan/Path";
 import {DebugDangerousFunctionPopup} from "./DebugDangerousFunctionPopup";
 import {TeamManager} from "../../logic/home/team/TeamManager";
 
-export const accountTagsForBfp: { [key: string]: string; } = {
-    "#2PP": "Tojoko",
-    "#8GG": "snacky",
-    "#P9JGPPLYQ": "💎 RomashkaGene",
-    "#VPYGJVJ0": "💎 KitenokGene",
-    "#8GCQYL2VL": "💎 hpdevfox",
-    "#2RGGJPLQU": "💎 tяnjs",
-    "#QUJPVU0L": "💎 BreadDEV"
-};
-
 export class DebugMenu extends DebugMenuBase {
     private readonly toggleDebugMenuButton: ToggleDebugMenuButton;
     private clicker?: ToggleDebugClickerButton;
@@ -205,15 +195,10 @@ export class DebugMenu extends DebugMenuBase {
         });
 
 
-        if (!Configuration.useBfp) {
-            if (!Configuration.useStage) {
-                this.createDebugMenuButton("SWITCH_TO_STAGE_SERVER", -1, -1, 0, EDebugCategory.SERVERS);
-            } else {
-                this.createDebugMenuButton("SWITCH_TO_PROD_SERVER", -1, -1, 0, EDebugCategory.SERVERS);
-            }
-            //  this.createDebugMenuButton("SWITCH_TO_BFP_BRAWL", -1, -1, 0, EDebugCategory.SERVERS);
+        if (!Configuration.useStage) {
+            this.createDebugMenuButton("SWITCH_TO_STAGE_SERVER", -1, -1, 0, EDebugCategory.SERVERS);
         } else {
-            // this.createDebugMenuButton("RETURN_FROM_BFP_BRAWL", -1, -1, 0, EDebugCategory.SERVERS);
+            this.createDebugMenuButton("SWITCH_TO_PROD_SERVER", -1, -1, 0, EDebugCategory.SERVERS);
         }
 
 
@@ -1069,21 +1054,6 @@ export class DebugMenu extends DebugMenuBase {
             case "SWITCH_TO_PROD_SERVER":
                 Configuration.useStage = false;
                 Configuration.save();
-
-                GameMain.reloadGame();
-                break;
-            case "RETURN_FROM_BFP_BRAWL":
-                Configuration.useBfp = false;
-
-                GameMain.reloadGame();
-                break;
-            case "SWITCH_TO_BFP_BRAWL":
-                if (!LogicVersion.isDeveloperBuild()) { // TODO: remove when BFP is up
-                    GUI.showFloaterText(LocalizationManager.getString("BFP_BRAWL_UNAVAILABLE_ATM"));
-                    return;
-                }
-
-                Configuration.useBfp = true;
 
                 GameMain.reloadGame();
                 break;

@@ -17,7 +17,6 @@ import {LatencyManager} from "./LatencyManager";
 import {UdpConnectionInfoMessage} from "../../../logic/message/udp/UdpConnectionInfoMessage";
 import {HashTagCodeGenerator} from "../../../titan/logic/util/HashTagCodeGenerator";
 import {LogicVersion} from "../../../logic/LogicVersion";
-import {accountTagsForBfp} from "../../../gene/debug/DebugMenu";
 import {StartLoadingMessage} from "../../../logic/message/battle/StartLoadingMessage";
 import {UsefulInfo} from "../../../gene/features/UsefulInfo";
 import {SkinChanger} from "../../../gene/features/SkinChanger";
@@ -215,39 +214,6 @@ Account tier: ${message.getAccountTier()}
 
             confData.add(216).writePointer(NULL);
             confData.add(228).writeInt(0);
-        }
-
-
-        if (Configuration.useBfp) {
-            if (!HomeMode.getInstance().isNull()) {
-                if (!HomeMode.getLogic().isNull()) {
-                    let avatar = message.getClientAvatar();
-                    let accountId = avatar.getAccountIdPtr();
-                    let name = avatar.getName();
-                    let hashtag = `#${HashTagCodeGenerator.toCode(accountId)}`;
-
-                    if (!Object.keys(Configuration.accountTags).includes(hashtag)) {
-                        if (!Object.keys(accountTagsForBfp).includes(hashtag)) {
-                            console.log(`[${hashtag}] - ${name}`);
-
-                            Configuration.accountTags[hashtag] = name;
-                            Configuration.save();
-
-                            if (Debug.getDebugMenu()) {
-                                Debug.destruct();
-
-                                Debug.create();
-                            }
-                        }
-                    }
-
-                    GameStateManager.clearGameData();
-                    GameStateManager.changeState(4);
-                    GameStateManager.changeToState();
-                }
-            }
-
-            return;
         }
 
         if (Configuration.regionId != -1) {
