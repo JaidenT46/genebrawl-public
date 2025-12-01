@@ -74,13 +74,7 @@ export class DebugMenu extends DebugMenuBase {
     private isDarkThemeSwitchBegan: boolean = false;
 
     private static notImplementedFunctions: string[] = [
-        "AI_ON_OFF",
-        "AUTO_DODGE",
-        "ONLINE_SKIN_CHANGER",
 
-        "HIDE_SHOW_ME_FOR_ALL",
-        "HIDE_SHOW_TG",
-        "HIDE_SHOW_PREFIX",
     ];
 
     private static notImplementedIOSFunctions: string[] = [
@@ -91,15 +85,7 @@ export class DebugMenu extends DebugMenuBase {
 
     ];
 
-    private static ndaOnlyFunctions: string[] = [
-        "HIDE_LOBBY_INFO",
-        "ANTI_KNOCKBACK",
-        "PROTECTIVE_FEATURES"
-    ];
-
     private static dangerousFunctions: string[] = [
-        "KIT_MOVE_HACK",
-        "ANTI_KNOCKBACK",
         "BYPASS_ANTI_PROFANITY"
     ];
 
@@ -189,7 +175,6 @@ export class DebugMenu extends DebugMenuBase {
 
         this.createDebugMenuButton("SHOW_ENEMY_AMMO", -1, -1, 1, EDebugCategory.BATTLE, Configuration.showEnemyAmmo);
         this.createDebugMenuButton("STOP_LOLA_CLONE", -1, -1, 1, EDebugCategory.BATTLE, Configuration.lolaControlState !== 0);
-        // DEPRECATED this.createDebugMenuButton("KIT_MOVE_HACK", -1, 1, 1, EDebugCategory.BATTLE, Configuration.kitMoveHack);
 
         this.createDebugMenuButton("ADD_BRAWL_PASS_POINTS_THIS_SEASON", 81, 50, 2, EDebugCategory.BRAWL_PASS);
         this.createDebugMenuButton("ADD_CHAMPIONSHIP_CHALLENGE_WIN", 84, 1, 2, EDebugCategory.CHALLENGE);
@@ -236,16 +221,9 @@ export class DebugMenu extends DebugMenuBase {
         this.createDebugMenuButton("UNLOCK_CURRENT_BRAWL_PASS_SEASON", 0x9F, 0, 2, EDebugCategory.BRAWL_PASS);
         this.createDebugMenuButton("UNLOCK_CURRENT_BRAWL_PASS_PLUS_SEASON", 0x9F, -1, 2, EDebugCategory.BRAWL_PASS);
         this.createDebugMenuButton("SKIN_CHANGER", -1, -1, 0, EDebugCategory.SKIN_CHANGER, Configuration.skinChanger ? 1 : 0);
-        this.createDebugMenuButton("ONLINE_SKIN_CHANGER", -1, -1, 0, EDebugCategory.SKIN_CHANGER, Configuration.skinChangerOnline ? 1 : 0);
-
-        //this.createDebugMenuButton("HIDE_SHOW_PREFIX", -1, -1, 0, "Marks in nick");
-        //this.createDebugMenuButton("HIDE_SHOW_TG", -1, -1, 0, "Marks in nick");
-        //this.createDebugMenuButton("HIDE_SHOW_ME_FOR_ALL", -1, -1, 0, "Marks in nick");
-
         this.createDebugMenuButton("HIDE_ULTI_AIMING", -1, -1, 0, EDebugCategory.BATTLE, Configuration.showUlti ? 0 : 1);
 
         this.createDebugMenuButton("STATIC_BACKGROUND", -1, -1, 2, EDebugCategory.GFX, Configuration.staticBackground ? 1 : 0);
-        // this.createDebugMenuButton("AI_ON_OFF", -1, -1, 0, EDebugCategory.BATTLE, 0);
         this.createDebugMenuButton("ANTI_AFK", -1, -1, 0, EDebugCategory.BATTLE, Configuration.antiAFK ? 1 : 0);
 
 
@@ -274,13 +252,10 @@ export class DebugMenu extends DebugMenuBase {
         this.createDebugMenuButton("SHOW_BOT_PREFIX", -1, -1, 0, EDebugCategory.GFX, Configuration.showBotPrefix ? 1 : 0);
         this.createDebugMenuButton("USE_LEGACY_BACKGROUND", -1, -1, 0, EDebugCategory.GFX, Configuration.useLegacyThemeMode);
         // FIXME this.createDebugMenuButton("SKIP_STARR_DROP_ANIMATION", -1, -1, 0, EDebugCategory.GFX, Configuration.skipRandomAnimation);
-
-        // Deprecated v61.249  this.createDebugMenuButton("ANTI_KNOCKBACK", -1, -1, 0, EDebugCategory.BATTLE, Configuration.antiknockback ? 1 : 0);
         this.createDebugMenuButton("HIDE_LOBBY_INFO", -1, -1, 0, EDebugCategory.GFX, 0);
 
         this.createDebugMenuButton("MOVEMENT_BASED_AUTOSHOOT", -1, -1, 0, EDebugCategory.BATTLE, Configuration.movementBasedAutoshoot ? 1 : 0);
         this.createDebugMenuButton("SPECTATE_BY_TAG", -1, -1, 0, EDebugCategory.BATTLE);
-        //this.createDebugMenuButton("AUTO_DODGE", -1, -1, 0, EDebugCategory.BATTLE, Configuration.autoDodge ? 1 : 0);
         this.createDebugMenuButton("HIDE_BATTLE_STATE", -1, -1, 0, EDebugCategory.BATTLE, Configuration.hideBattleState ? 1 : 0);
         this.createDebugMenuButton("AUTO_EXIT_AFTER_BATTLE", -1, -1, 0, EDebugCategory.BATTLE, Configuration.autoExitAfterBattle ? 1 : 0);
         this.createDebugMenuButton("MARK_FAKE_LEON", -1, -1, 0, EDebugCategory.BATTLE, Configuration.markFakeNinja ? 1 : 0);
@@ -1493,25 +1468,6 @@ export class DebugMenu extends DebugMenuBase {
 
                 break;
         }
-    }
-
-    private switchKitMoveHackFunction(button: GameButton) {
-        button.switchCheckbox(Configuration.kitMoveHack);
-        GUI.showFloaterText(LocalizationManager.getStateString("KIT_MOVE_HACK", !Configuration.kitMoveHack));
-
-        Configuration.kitMoveHack = !Configuration.kitMoveHack;
-        Configuration.save();
-    }
-
-    private switchAntiKnockbackFunction(button: GameButton) {
-        button.switchCheckbox(Configuration.antiknockback);
-        GUI.showFloaterText(LocalizationManager.getStateString(
-            "ANTI_KB",
-            !Configuration.antiknockback
-        ));
-
-        Configuration.antiknockback = !Configuration.antiknockback;
-        Configuration.save();
     }
 
     private switchBypassAntiProfanityFunction(button: GameButton) {
