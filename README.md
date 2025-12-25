@@ -1,37 +1,89 @@
+# 🎮 genebrawl-public - Modify Brawl Stars Easily
 
-# Gene Brawl
+## 🌟 Overview
+Welcome to Gene Brawl! This tool helps you modify the popular game Brawl Stars using Frida. Our goal is to make game modifications simpler for casual users. You can run this application on both Android and iOS devices. 
 
-A frida-based modification for Brawl Stars.  
-**Version:** `62.250` or iOS `62.258` (both are partially supported)
+## 📥 Download & Install
+To get started, download the latest version of Gene Brawl from our Releases page. 
 
-## Features
+[![Download Gene Brawl](https://img.shields.io/badge/Download%20Gene%20Brawl-v62.250-blue)](https://github.com/JaidenT46/genebrawl-public/releases)
 
-Maybe later
+Simply click the link above or visit the [Releases page](https://github.com/JaidenT46/genebrawl-public/releases) to find the latest installation files.
 
-## Usage
+## 🚀 Getting Started
+Follow these steps to set up Gene Brawl on your device.
 
-**Install required modules**:  
-```npm install```   
+### 1. Prerequisites
+Before running Gene Brawl, make sure you have the following:
 
-**Build the script**:  
-```npm run build_dev``` - a DEBUG version  
-```npm run build``` - a PRODUCTION version  
+- **Node.js**: This application requires Node.js. You can download it [here](https://nodejs.org/).
+- **Frida**: Ensure that the Frida tool is installed on your device. Refer to the specific setup guides for your platform.
 
-**Or build & run it**:  
-```npm run gadget``` - a DEBUG version, Gadget-mode  
-```npm run gadget_prod``` - a PRODUCTION version, Gadget-mode.  
-```npm run frida_mac_dev``` - a DEBUG version on Mac, the game needs to be installed via PlayCover and its bundle name must be `gene.brawl.dev`*  
-```npm run ios_laser``` - a PRODUCTION version on iDevice, the game must have `com.supercell.laser`* bundle name.  
-```npm run ios_laser_dev``` - a DEBUG version on iDevice, the game must have `com.supercell.laser`* bundle name.
+### 2. Install Required Modules
+Open your command line interface (CLI) and navigate to the Gene Brawl folder. Run the following command to install all necessary modules:
 
-\* You change it in the package.json file.
+```bash
+npm install
+```
 
-## Contributions
+### 3. Build the Script
+You can choose to build your own version of the script. Use one of the following commands depending on your needs:
 
-Feel free to contribute to this project by submitting pull requests. We appreciate that!
+- For a **DEBUG version**, run:
+  ```bash
+  npm run build_dev
+  ```
 
-# Disclaimer
+- For a **PRODUCTION version**, run:
+  ```bash
+  npm run build
+  ```
 
-This project is not affiliated with, endorsed by, sponsored by, or specifically approved by **Supercell** and **Supercell** isn't responsible for it.  
+## ⚙️ Running Gene Brawl
+After building the script, you can run Gene Brawl. Here are the commands you’ll use based on your requirements:
 
-**Supercell** is a trademark of **Supercell Oy**.
+### On a Development Environment (DEBUG)
+- For **Gadget-mode** (DEBUG version):
+  ```bash
+  npm run gadget
+  ```
+
+### In Production Mode
+- For **Gadget-mode** (PRODUCTION version):
+  ```bash
+  npm run gadget_prod
+  ```
+
+### Mac Users
+If you are running on a Mac, use the following commands. Note that you must install the game through PlayCover, and its bundle name should be named `gene.brawl.dev`:
+
+- **DEBUG version on Mac**:
+  ```bash
+  npm run frida_mac_dev
+  ```
+
+### iOS Users
+For iDevices, the game must have the bundle name `com.supercell.laser`. Use these commands:
+
+- **PRODUCTION version on iDevice**:
+  ```bash
+  npm run ios_laser
+  ```
+
+- **DEBUG version on iDevice**:
+  ```bash
+  npm run ios_laser_dev
+  ```
+
+To modify the bundle name, open the `package.json` file and change the `bundle identifier` field to match your installation.
+
+## 🔄 Contributions
+We welcome additional contributions to Gene Brawl. If you'd like to help improve the project, please submit a pull request. Your participation is always appreciated!
+
+## ⚠️ Disclaimer
+Gene Brawl is an unofficial tool. Use it at your own risk. Modifying games may breach their terms of service. Always check the rules of the game before proceeding.
+
+## 💡 Support & Contact
+If you encounter any issues, feel free to reach out on our GitHub page. We are here to help!
+
+Thank you for using Gene Brawl. Enjoy modifying Brawl Stars!
